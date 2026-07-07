@@ -1,32 +1,99 @@
-🚗 Automotive Parameter Monitoring using CAN
+# 🚗 AUTOMOTIVE PARAMETER MONITORING USING CAN
 
-I recently worked on a project focused on real-time vehicle parameter monitoring using CAN (Controller Area Network) communication, enabling reliable data exchange and efficient monitoring in automotive embedded systems.
+## 📌 Project Overview
 
-📌 Problem
-Modern vehicles require continuous monitoring of parameters such as fuel level, engine temperature, and indicator status. Traditional point-to-point wiring increases complexity and reduces reliability in communication between different modules.
+This project implements an Automotive Parameter Monitoring System using **LPC2129 microcontrollers** and the **Controller Area Network (CAN)** protocol. The system continuously monitors vehicle parameters such as engine temperature, fuel level, and indicator status, while enabling reliable real-time communication between multiple embedded nodes over a CAN bus.
 
-💡 Solution
-I developed an Automotive Parameter Monitoring System using CAN protocol with LPC2129 microcontrollers, where multiple nodes communicate sensor and control data in real time through a CAN bus network.
+The project demonstrates how CAN communication simplifies wiring, improves reliability, and enables efficient data exchange in automotive embedded systems.
 
-⚙️ How it Works
-• Main node continuously monitors engine temperature using DS18B20 sensor
-• Fuel node reads fuel gauge data through on-chip ADC and calculates fuel percentage
-• Indicator node receives control signals from the main node using CAN communication
-• Real-time sensor data and system status are displayed on LCD
-• External interrupts are used for indicator control operations
-• CAN transceivers ensure reliable communication between all nodes
-• System performs continuous monitoring and data exchange in real time
+---
 
-🛠️ Tech Stack
-LPC2129 Microcontroller | Embedded C | CAN Protocol | MCP2551 CAN Transceiver | DS18B20 Temperature Sensor | ADC | LCD | Keil uVision | Flash Magic
+## 🎯 Objective
 
-🔍 Key Features
-• Real-time automotive parameter monitoring
-• Multi-node CAN communication
-• Fuel level monitoring using ADC
-• Engine temperature sensing and display
-• Interrupt-based indicator control
-• Reliable embedded networking system
+To design a multi-node automotive embedded system that monitors vehicle parameters in real time and exchanges data reliably using the CAN (Controller Area Network) protocol.
 
-🎯 Outcome
-Successfully developed a working prototype capable of monitoring and transmitting vehicle parameters in real time using CAN communication, improving reliability and efficiency in automotive embedded systems.
+---
+
+## 🧰 Hardware Requirements
+
+* LPC2129 Microcontroller (3 Nodes)
+* MCP2551 CAN Transceiver
+* DS18B20 Temperature Sensor
+* Fuel Sensor / Potentiometer (ADC Input)
+* 20×4 LCD Display
+* Push Buttons / Switches
+* LEDs (Indicator Simulation)
+* CAN Bus Connections
+
+---
+
+## 💻 Software Requirements
+
+* Embedded C
+* Keil uVision
+* Flash Magic
+
+---
+
+## ⚙️ Working Principle
+
+1. Initializes GPIO, ADC, LCD, CAN controller, and interrupts.
+2. The Main Node continuously reads engine temperature using the DS18B20 sensor.
+3. The Fuel Node reads the fuel level using the on-chip ADC and calculates the fuel percentage.
+4. Sensor data is transmitted between nodes using the CAN protocol.
+5. The Indicator Node receives control messages and updates the indicator status.
+6. Real-time temperature, fuel level, and system status are displayed on the LCD.
+7. CAN transceivers ensure reliable communication between all embedded nodes.
+
+---
+
+## 📡 CAN Communication
+
+**Main Node**
+
+* Reads engine temperature
+* Transmits temperature data via CAN
+* Controls indicator operations
+
+**Fuel Node**
+
+* Reads fuel level through ADC
+* Calculates fuel percentage
+* Sends fuel data over CAN
+
+**Indicator Node**
+
+* Receives CAN messages
+* Controls indicator LEDs
+* Updates indicator status in real time
+
+---
+
+## 🔔 Features
+
+* Real-time vehicle parameter monitoring
+* Multi-node CAN communication
+* Engine temperature monitoring using DS18B20
+* Fuel level monitoring using ADC
+* LCD display for live system status
+* Interrupt-based indicator control
+* Reliable embedded networking using CAN
+
+---
+
+## 🚀 Applications
+
+* Automotive Electronic Control Units (ECUs)
+* Vehicle Monitoring Systems
+* Automotive Communication Networks
+* Industrial CAN-based Monitoring Systems
+* Embedded Networking Applications
+  
+---
+
+## 📷 Hardware Setup
+<img width="1280" height="957" alt="Hardware setup" src="https://github.com/user-attachments/assets/e1b31e7a-2a10-4a55-a01a-b2a44c34a232" />
+
+## 👤 Author
+
+**Bala Sudha**
